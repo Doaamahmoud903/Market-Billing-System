@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Market Billing System</title>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reddit+Mono:wght@200..900&family=Reddit+Sans+Condensed:wght@200..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    </head>
+
+</html>
+<body>
+    <div class="w-50 mx-auto" id="mainContainer">
+        <div class="heading">
+            <h2 class="text-center mt-5 pt-3 fw-bold">Market Billing System</h2>
+        </div>
+        <div class="my-3">
+            <label for="inputName" class="form-label">Product Name</label>
+            <input class="form-control form-control-lg" id="inputName" type="text">
+          <span id="alertName" class="alert d-none mt-1" role="alert">
+            <strong>Name should contain 2 char at least and Can't be empty..</strong>
+          </span>
+       </div>
+        <div class="mb-3">
+            <label for="inputPrice" class="form-label">Product Price</label>
+            <input class="form-control form-control-lg" id="inputPrice" type="text">
+            <div id="alertPrice" class="alert d-none mt-1" role="alert">
+                <strong>Price must begin be a number and Can't be empty ...</strong>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="inputQuantity" class="form-label">Quantity</label>
+            <input class="form-control form-control-lg" id="inputQuantity" type="text">
+            <div id="alertQuantity" class="alert d-none mt-1" role="alert">
+                <strong>Quantity must begin be a number and Can't be empty ...</strong>
+            </div>         
+        </div>
+        <div class="form-check form-switch mb-3">
+            <input class="form-check-input" type="checkbox" id="saleCheck">
+            <label class="form-check-label" for="saleCheck">Sale</label>
+          </div>
+
+        <button class="btn btn-primary fw-bold" id="inputAddPro">Add Product</button>
+        <button class="btn btn-warning d-none fw-bold " id="inputUpdatePro">Update Product</button>
+    </div>
+
+
+    <div class="my-4 w-50 mx-auto" id="searchContainer">
+        <input onkeyup="searchProduct(this.value)" class="form-control me-2 form-control-lg" type="search" placeholder="Search For Product" aria-label="Search">
+    </div>
+    <table class="w-50 mx-auto table table-dark table-striped text-center py-3" id="disTable">
+        <thead>
+            <th>Index</th>
+            <th>Name</th>
+            <th>price</th>
+            <th>Quantity</th>
+            <th>Sale</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
+
+    <script src="js/main.js"></script>
+</body>
